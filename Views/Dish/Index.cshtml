@@ -1,0 +1,16 @@
+﻿
+@model List<Dish>
+
+
+<div class="text-center">
+    <h1>Welcome to CRUDelicious</h1>
+    <h2>Check out some recent dishes!</h2>
+    <a href="/dish/new">Add a Dish</a>
+    @* link to add a dish *@
+    @foreach (Dish dish in Model)
+    {
+        //make dish.Name into an A tag
+        //linq function to display in order?
+        <p><a href="/@dish.DishId">@dish.Name</a> by @dish.Chef</p>
+    }
+</div>

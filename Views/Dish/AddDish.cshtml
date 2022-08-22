@@ -1,0 +1,40 @@
+@model Dish
+
+<h1>Add a new Dish</h1>
+<a href="/">Home</a>
+
+<form asp-controller="Dish" asp-action="Create" method="POST">
+    <div class="mb-3">
+        <label asp-for="Name"></label>
+        <span asp-validation-for="Name" class="text-danger font-weight-bold"></span>
+        <input asp-for="Name" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Chef"></label>
+        <span asp-validation-for="Chef" class="text-danger font-weight-bold"></span>
+        <input asp-for="Chef" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Tastiness"></label>
+        <span asp-validation-for="Tastiness" class="text-danger font-weight-bold"></span>
+        <select type="number" asp-for="Tastiness" class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Calories"></label>
+        <span asp-validation-for="Calories" class="text-danger font-weight-bold"></span>
+        <input type="number" asp-for="Calories" class="form-control"/>
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description"></label>
+        <span asp-validation-for="Description" class="text-danger font-weight-bold"></span>
+        <input asp-for="Description" class="form-control"/>
+    </div>
+    <button class="btn btn-success" type="submit">Submit</button>
+</form>
